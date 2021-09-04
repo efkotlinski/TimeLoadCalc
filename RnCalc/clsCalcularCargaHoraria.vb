@@ -41,12 +41,14 @@
   End Function
 
   Public Function TimeLoadReverse(v As Double, dblIntFixo As Double, dblCargaHoraria As Double) As String
-    Throw New NotImplementedException()
-  End Function
+        Return MinutesToTime(v - dblIntFixo - dblCargaHoraria)
+        'Throw New NotImplementedException()
+    End Function
 
   Public Function TimeLoad(v As Double, dblIntFixo As Double, dblCargaHoraria As Double) As String
-    Throw New NotImplementedException()
-  End Function
+        Return MinutesToTime(v + dblIntFixo + dblCargaHoraria)
+        'Throw New NotImplementedException()
+    End Function
 
   Public Function ConvertDownTime(ByVal dblTime As Double) As Double
     Return (dblTime / 60) * 52.5
